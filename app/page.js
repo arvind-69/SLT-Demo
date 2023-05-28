@@ -1,20 +1,21 @@
 "use client";
 
 // Import dependencies
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import * as tf from "@tensorflow/tfjs";
 import Webcam from "react-webcam";
 import "./page.module.css";
-import { nextFrame } from "@tensorflow/tfjs";
+import Some from "./static"
 // 2. TODO - Import drawing utility here
 // e.g. import { drawRect } from "./utilities";
 // Define our labelmap
+
 const labelMap = {
   1: { name: "Hello", color: "red" },
-  2: { name: "Thank You", color: "yellow" },
-  3: { name: "I Love You", color: "lime" },
-  4: { name: "Yes", color: "blue" },
-  5: { name: "No", color: "purple" },
+  2: { name: "Yes", color: "blue" },
+  3: { name: "No", color: "purple" },
+  4: { name: "Thank You", color: "yellow" },
+  5: { name: "I Love You", color: "lime" },
 };
 
 // Define a drawing function
@@ -27,7 +28,7 @@ export const drawRect = (
   imgHeight,
   ctx
 ) => {
-  for (let i = 0; i <= boxes.length; i++) {
+  for (let i = 0; i < boxes.length; i++) {
     if (boxes[i] && classes[i] && scores[i] > threshold) {
       // Extract variables
       const [y, x, height, width] = boxes[i];
@@ -66,9 +67,12 @@ function App() {
     // 3. TODO - Load network
     // e.g. const net = await cocossd.load();
     // https://tensorflowjsrealtimemodel.s3.au-syd.cloud-object-storage.appdomain.cloud/model.json
-    const net = await tf.loadGraphModel(
-      "https://tensorflowjsrealtimemodel.s3.au-syd.cloud-object-storage.appdomain.cloud/model.json"
-    );
+    const net = await tf.loadGraphModel("/model/model.json");
+
+    console.log("Model loaded successfully:", net);
+    // const net = await tf.loadGraphModel(
+    //   "https://tensorflowjsrealtimemodel.s3.au-syd.cloud-object-storage.appdomain.cloud/model.json"
+    // );
 
     //  Loop and detect hands
     setInterval(() => {
@@ -138,40 +142,44 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <Webcam
-          ref={webcamRef}
-          muted={true}
-          style={{
-            position: "absolute",
-            marginLeft: "auto",
-            marginRight: "auto",
-            left: 0,
-            right: 0,
-            textAlign: "center",
-            zindex: 9,
-            width: 640,
-            height: 480,
-          }}
-        />
-
-        <canvas
-          ref={canvasRef}
-          style={{
-            position: "absolute",
-            marginLeft: "auto",
-            marginRight: "auto",
-            left: 0,
-            right: 0,
-            textAlign: "center",
-            zindex: 8,
-            width: 640,
-            height: 480,
-          }}
-        />
-      </header>
-    </div>
+    <>
+      <div>
+        <Some />
+      </div>
+      <div className="App">
+        <header className="App-header">
+          <Webcam
+            ref={webcamRef}
+            muted={true}
+            style={{
+              position: "absolute",
+              marginLeft: "auto",
+              marginRight: "auto",
+              left: 0,
+              right: 0,
+              textAlign: "center",
+              zindex: 9,
+              width: 640,
+              height: 480,
+            }}
+          />
+          <canvas
+            ref={canvasRef}
+            style={{
+              position: "absolute",
+              marginLeft: "auto",
+              marginRight: "auto",
+              left: 0,
+              right: 0,
+              textAlign: "center",
+              zindex: 8,
+              width: 640,
+              height: 480,
+            }}
+          />
+        </header>
+      </div>
+    </>
   );
 }
 
