@@ -152,7 +152,7 @@ function App() {
             ref={webcamRef}
             muted={true}
             style={{
-              borderradius: "5px",
+              borderRadius: "5px",
               position: "absolute",
               marginLeft: "auto",
               marginRight: "auto",
