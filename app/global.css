@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 body{
-  background-color: #06132c;
+  background-color: #091f48;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -14,8 +14,13 @@ body{
 .Intro{
   text-align: center;
   color: rgba(255, 255, 255, 0.87);
-  margin-left: 30px;
-  margin-right: 30px;
+  letter-spacing: 0.9px;
+  line-height: 25px;
+  font-size: 20px;
+}
+.Team{
+  text-align: center;
+  color: rgba(255, 255, 255, 0.87);
   letter-spacing: 0.9px;
   line-height: 25px;
   font-size: 20px;

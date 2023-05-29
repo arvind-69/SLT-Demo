@@ -4,6 +4,7 @@
 import React, { useRef, useEffect } from "react";
 import * as tf from "@tensorflow/tfjs";
 import Webcam from "react-webcam";
+import Team from "./team"
 import "./global.css";
 import Some from "./static"
 // 2. TODO - Import drawing utility here
@@ -178,6 +179,7 @@ function App() {
             }}
           />
         </header>
+        <Team />
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import "./global.css";
-export default function Something() {
+export default function PageHeader() {
     return (
         <div>
             <div className="Header">
