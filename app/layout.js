@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
-
+import "./page.module.css";
 export const metadata = {
   title: "Reat time detection app",
   description: "A web demo of sign language translator",

@@ -2,13 +2,13 @@ import "./page.module.css";
 export default function Something() {
     return (
         <div>
-            <div className="header">
+            <div className="Header">
                 <h1>Sign</h1>
                 <h1>Language</h1>
                 <h1>Translator</h1>
             </div>
             <hr />
-            <div className="intro">
+            <div className="Intro">
                 <h2>Introduction</h2>
                 <p>The Sign Language Translator project aims to bridge the communication
                     gap between sign language users and non-sign language users. Sign language
