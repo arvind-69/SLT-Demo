@@ -18,6 +18,8 @@ export default function PageHeader() {
                     The project addresses this challenge by developing a machine learning-based
                     solution that translates sign language gestures into text or spoken language.</p>
             </div>
+            <hr />
+            <h1>Demo</h1>
         </div>
 
     )
