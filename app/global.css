@@ -27,10 +27,6 @@ body{
 }
 .App {
   text-align: center;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 0;
-  padding-bottom: 0;
 }
 
 .App-logo {
@@ -45,6 +41,10 @@ body{
 }
 
 .App-header {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
