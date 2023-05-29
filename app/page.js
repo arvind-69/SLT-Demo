@@ -4,7 +4,7 @@
 import React, { useRef, useEffect } from "react";
 import * as tf from "@tensorflow/tfjs";
 import Webcam from "react-webcam";
-import "./page.module.css";
+import "./global.css";
 import Some from "./static"
 // 2. TODO - Import drawing utility here
 // e.g. import { drawRect } from "./utilities";

@@ -1,4 +1,4 @@
-import "./static.module.css";
+import "./global.css";
 export default function Something() {
     return (
         <div>
