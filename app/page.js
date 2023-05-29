@@ -147,6 +147,8 @@ function App() {
       <div>
         <Some />
       </div>
+      <hr />
+      <h1 className="demo">Demo</h1>
       <div className="App">
         <header className="App-header">
           <Webcam
