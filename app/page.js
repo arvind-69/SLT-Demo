@@ -142,7 +142,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div >
       <div>
         <Some />
       </div>
@@ -152,7 +152,6 @@ function App() {
             ref={webcamRef}
             muted={true}
             style={{
-              borderRadius: "5px",
               position: "absolute",
               marginLeft: "auto",
               marginRight: "auto",
@@ -180,7 +179,7 @@ function App() {
           />
         </header>
       </div>
-    </>
+    </div>
   );
 }
 
