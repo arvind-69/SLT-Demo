@@ -1,3 +1,7 @@
+body{
+  background-color: #06132c;
+}
+
 .Header{
   font-size: 45px;
   color: rgba(255, 255, 255, 0.87);
