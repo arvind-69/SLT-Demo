@@ -179,8 +179,8 @@ function App() {
             }}
           />
         </header>
-        <Team />
       </div>
+      <Team />
     </div>
   );
 }
